@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <windows.h>
 
 #define MazeSize 24
 #define RESET   "\033[0m"
@@ -103,6 +104,70 @@ int main(void) {
     };
 
     int FloorNum;
+    char text1[] = "Где я?.. Холодный металл, странные звуки... Это корабль пришельцев!";
+    char text2[] = "Внимание! Вы были похищены. Сейчас вы на корабле пришельцев!";
+    char text3[] = "Побег — ваш единственный шанс!";
+    int a;
+
+    for (a = 0; a < 10; a++)
+      printf("\n");
+
+    for (a = 0; a < 30; a++)
+      printf(" ");
+
+    printf("%s", GREEN);
+
+    for (a = 0; text1[a] != '\0'; a++)
+    {
+    printf("%c", text1[a]);
+    fflush(stdout);
+    Sleep(40);
+    }
+
+    Sleep(300);
+
+    system("cls");
+    printf("\033[H");
+
+    for (a = 0; a < 10; a++)
+      printf("\n");
+
+    for (a = 0; a < 30; a++)
+      printf(" ");
+
+    for (a = 0; text2[a] != '\0'; a++)
+    {
+    printf("%c", text2[a]);
+    fflush(stdout);
+    Sleep(40);
+    }
+
+    Sleep(300);
+
+    system("cls");
+    printf("\033[H");
+
+    printf("%s", RED);
+
+    for (a = 0; a < 10; a++)
+      printf("\n");
+
+    for (a = 0; a < 30; a++)
+      printf(" ");
+
+    for (a = 0; text3[a] != '\0'; a++)
+    {
+    printf("%c", text3[a]);
+    fflush(stdout);
+    Sleep(40);
+    }
+
+    Sleep(300);
+
+    printf("%s", RESET);
+    system("cls");
+    printf("\033[H");
+
     printf("На каком этаже вы находитесь(номер)?\n");
     printf("1 (Черные стены)\n");
     printf("2 (Зеленые стены)\n");
@@ -344,10 +409,30 @@ int main(void) {
       }
     }
     if (FloorNum == 0)
-      {
-       system("cls");
-       printf("Вы выбрались с корабля пришельцев!");
-      }
+{
+    system("cls");
+    
+    for (a = 0; a < 10; a++)
+        printf("\n");
+    
+
+    for (a = 0; a < 35; a++)
+        printf(" ");
+
+    printf("%s", GREEN);
+    char text[] = "Вы выбрались с корабля пришельцев!";
+    for (a = 0; text[a] != '\0'; a++)
+    {
+        printf("%c", text[a]);
+        fflush(stdout);
+        Sleep(40);
+    }
+    
+    for (a = 0; a < 15; a++)
+        printf("\n");
+
+    printf("%s", RESET);
+}
     return 0;
 }
 
