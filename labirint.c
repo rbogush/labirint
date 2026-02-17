@@ -132,7 +132,7 @@ int main(void) {
     for (a = 0; a < 10; a++)
       printf("\n");
 
-    for (a = 0; a < 30; a++)
+    for (a = 0; a < 35; a++)
       printf(" ");
 
     for (a = 0; text2[a] != '\0'; a++)
@@ -152,7 +152,7 @@ int main(void) {
     for (a = 0; a < 10; a++)
       printf("\n");
 
-    for (a = 0; a < 30; a++)
+    for (a = 0; a < 50; a++)
       printf(" ");
 
     for (a = 0; text3[a] != '\0'; a++)
@@ -162,7 +162,7 @@ int main(void) {
     Sleep(40);
     }
 
-    Sleep(300);
+    Sleep(500);
 
     printf("%s", RESET);
     system("cls");
@@ -416,7 +416,7 @@ int main(void) {
         printf("\n");
     
 
-    for (a = 0; a < 35; a++)
+    for (a = 0; a < 50; a++)
         printf(" ");
 
     printf("%s", GREEN);
